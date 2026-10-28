@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConvivApp · Tecnología para una mejor convivencia escolar</title>
+  <meta name="description" content="ConvivApp ayuda a estudiantes y colegios a cuidar la convivencia: reportes anónimos con seguimiento, botón de ayuda, panel del colegio, retos para aprender y juegos para todos. Para Android, Windows y la web.">
+  <meta name="theme-color" content="#3B3FB8">
+  <meta property="og:title" content="ConvivApp">
+  <meta property="og:description" content="Tecnología para una mejor convivencia escolar. Reporta, aprende y juega.">
+  <meta property="og:image" content="img/66_liquid_glass_oscuro.png">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <!-- Barra de navegación -->
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="ConvivApp, inicio">
+      <img src="img/logo.svg" alt="" width="34" height="34">
+      <span>ConvivApp</span>
+    </a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#caracteristicas">Características</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#convi">Convi</a>
+      <a href="#como">Cómo se hizo</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro / oscuro">
+        <svg viewBox="0 0 24 24" class="i-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg viewBox="0 0 24 24" class="i-sun"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <a class="btn btn-primary btn-small" href="#descargar">Descargar</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <span class="chip"><span class="dot"></span> <span id="version-chip">Versión nueva disponible</span></span>
+        <h1>La convivencia escolar,<br><span class="grad">en buenas manos.</span></h1>
+        <p class="lead">ConvivApp conecta a los estudiantes con el equipo de convivencia de su colegio. Reportar es fácil y seguro, cada caso tiene seguimiento, y todos aprenden a convivir mejor… jugando.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/convivsolutions/convivapp-descargas/releases/latest/download/ConvivApp.apk">
+            <svg viewBox="0 0 24 24" class="b-ico"><path d="M7 9h10v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM5 9.5v6M19 9.5v6M9 19v2.5M15 19v2.5M7.5 8.5a4.5 4.5 0 0 1 9 0z"/></svg>
+            Android
+          </a>
+          <a class="btn btn-glass" href="https://github.com/convivsolutions/convivapp-descargas/releases/latest/download/ConvivApp-Setup.exe">
+            <svg viewBox="0 0 24 24" class="b-ico"><path d="M3 5.5l7.5-1v7H3zM12 4.2L21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.2z"/></svg>
+            Windows
+          </a>
+          <a class="btn btn-glass" href="https://convivapp-3a5d6.web.app" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="b-ico"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            Usar en la web
+          </a>
+        </div>
+        <p class="fine" id="release-info">Gratis · Android, Windows y cualquier navegador (también iPhone).</p>
+      </div>
+      <div class="hero-art reveal">
+        <div class="phone phone-back"><img src="img/65_liquid_glass.png" alt="Inicio de ConvivApp con estilo Liquid Glass claro"></div>
+        <div class="phone phone-front"><img src="img/66_liquid_glass_oscuro.png" alt="Inicio de ConvivApp con estilo Liquid Glass oscuro"></div>
+        <div class="hero-convi" aria-hidden="true">
+          <svg class="convi mini" viewBox="0 0 200 240"><use href="#convi-art"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Franja de valores -->
+    <section class="strip reveal" aria-label="Lo esencial">
+      <div><b>Anónimo</b><span>si así lo prefieres</span></div>
+      <div><b>Seguimiento</b><span>cada caso tiene respuesta</span></div>
+      <div><b>3 plataformas</b><span>Android · Windows · Web</span></div>
+      <div><b>+15 juegos</b><span>para aprender y divertirse</span></div>
+    </section>
+
+    <!-- Características -->
+    <section id="caracteristicas" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Características</span>
+        <h2>Todo lo que un colegio necesita para cuidar a sus estudiantes</h2>
+        <p>Pensada desde el primer día para que pedir ayuda sea fácil y para que nada quede sin atender.</p>
+      </div>
+      <div class="features">
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#21A666"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Reportes anónimos</h3>
+          <p>Cuenta lo que pasó con o sin tu nombre: acoso, ciberacoso, agresiones o conflictos. Puedes adjuntar fotos y elegir qué tan urgente es.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#6C4BC6"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+          <h3>Seguimiento con chat</h3>
+          <p>Cada caso tiene su estado (recibido, en revisión, en atención, solucionado) y un chat privado con el equipo de convivencia.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#E15151"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></div>
+          <h3>Botón de ayuda SOS</h3>
+          <p>Siempre a un toque: teléfonos de emergencia, el contacto de tu colegio y pasos claros para cuando lo necesitas ya.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#3F72D6"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Panel del colegio</h3>
+          <p>El personal ve solo los casos de su institución, con gráficas, casos urgentes primero, notas internas e historial de cada cambio.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#159E9C"><svg viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h5v16H6a2 2 0 0 0-2 2zM20 6a2 2 0 0 0-2-2h-5v16h5a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Aprender jugando</h3>
+          <p>Temas de convivencia explicados para estudiantes, retos con preguntas y minijuegos que suben tu nivel.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#E0569B"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div>
+          <h3>Mensajes y perfiles</h3>
+          <p>Habla con personas de tu colegio, con perfiles, fotos, biografía y bloqueo. Soporte de ConvivApp siempre disponible.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#F2A52A"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></div>
+          <h3>Niveles, logros y títulos</h3>
+          <p>Gana puntos, sube de nivel con una celebración de Convi, colecciona títulos y elige cuáles mostrar en tu perfil.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="f-ico" style="--c:#4338CA"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 3-6 6-10z"/></svg></div>
+          <h3>Hecha a tu gusto</h3>
+          <p>Modo claro u oscuro, estilo Liquid Glass, color de acento, decoración de temporada, sonidos y música originales.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Para estudiantes / para colegios -->
+    <section class="section split">
+      <div class="split-text reveal">
+        <span class="kicker">Para el colegio</span>
+        <h2>Cada caso, atendido a tiempo</h2>
+        <ul class="checks">
+          <li>Casos urgentes arriba, con aviso en el panel.</li>
+          <li>Cambiar el estado avisa al estudiante al instante.</li>
+          <li>Notas internas que solo ve el personal.</li>
+          <li>Cada institución ve únicamente lo suyo.</li>
+          <li>Funciona en el computador del colegio y en el teléfono.</li>
+        </ul>
+      </div>
+      <div class="split-art reveal">
+        <div class="laptop"><img src="img/10_panel_escritorio.png" alt="Panel institucional de ConvivApp en el computador"></div>
+      </div>
+    </section>
+
+    <section class="section split reverse">
+      <div class="split-text reveal">
+        <span class="kicker">Para estudiantes</span>
+        <h2>Pedir ayuda sin miedo</h2>
+        <ul class="checks">
+          <li>Reporta en menos de un minuto, con o sin tu nombre.</li>
+          <li>Sigue tu caso y conversa con el colegio.</li>
+          <li>Mensajes con compañeros, perfiles y fotos.</li>
+          <li>Retos, minijuegos y juegos en línea con amigos.</li>
+        </ul>
+      </div>
+      <div class="split-art phones-row reveal">
+        <div class="phone small tilt-l"><img src="img/73_chat.png" alt="Mensajes entre estudiantes"></div>
+        <div class="phone small tilt-r"><img src="img/106_nivel.png" alt="Celebración al subir de nivel"></div>
+      </div>
+    </section>
+
+    <!-- Juegos -->
+    <section id="juegos" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Juegos</span>
+        <h2>Aprender también puede ser divertido</h2>
+        <p>Juegos originales, hechos para ConvivApp, con música propia. Se juega solo, en el mismo teléfono o en línea con amigos.</p>
+      </div>
+
+      <article class="game game-racing reveal">
+        <div class="game-text">
+          <span class="badge">Hasta 8 en línea</span>
+          <h3>Catastrophic Racing</h3>
+          <p>Carreras con 21 vehículos que se desbloquean por nivel, 6 pistas enormes (escuela, isla pirata, nieve, ciudad de noche, desierto y un volcán), derrapes con mini-turbo, cohetes, lluvia, Gran Premio y Contrarreloj contra tu fantasma.</p>
+          <p class="hl">Y 13 eventos catastróficos al azar: meteoritos, un robot gigante que dispara láseres, tornados, un dragón, un OVNI, tormentas, ventiscas… ¡y un modo Caos!</p>
+        </div>
+        <div class="game-art">
+          <div class="cover-cycle" aria-label="Portada animada del juego">
+            <img src="img/130_portada_meteoritos.png" alt="">
+            <img src="img/130_portada_rayo.png" alt="">
+            <img src="img/130_portada_ventisca.png" alt="">
+            <img src="img/130_portada_ovni.png" alt="">
+          </div>
+          <div class="phones-row">
+            <div class="phone small"><img src="img/120_evento_10_dragon.png" alt="Un dragón deja fuego en la pista"></div>
+            <div class="phone small"><img src="img/120_evento_01_megabot.png" alt="El MEGA-BOT dispara láseres"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game game-draw reveal">
+        <div class="game-text">
+          <span class="badge">2 a 10 jugadores</span>
+          <h3>Dibuja y Adivina</h3>
+          <p>Por turnos, alguien dibuja una palabra y los demás la adivinan escribiendo. 360 palabras en 12 categorías, pistas de letras, aviso de "¡casi!", palabras propias del colegio, podio final… y un modo fiesta para jugar con un solo teléfono.</p>
+          <p class="hl">La palabra nunca viaja por la red mientras se dibuja: nadie puede hacer trampa.</p>
+        </div>
+        <div class="game-art phones-row">
+          <div class="phone small tilt-l"><img src="img/145_dibuja_adivino.png" alt="Adivinando un dibujo en línea"></div>
+          <div class="phone small tilt-r"><img src="img/147_dibuja_resultados.png" alt="Podio al final de la partida"></div>
+        </div>
+      </article>
+
+      <div class="mini-games">
+        <div class="card mini reveal"><img src="img/85_conecta4.png" alt=""><div><h4>Conecta 4 y Triqui</h4><p>En línea con alguien de tu colegio o contra la máquina.</p></div></div>
+        <div class="card mini reveal"><img src="img/92_skins.png" alt=""><div><h4>42 skins</h4><p>Personaliza cada juego; se desbloquean al subir de nivel.</p></div></div>
+        <div class="card mini reveal"><img src="img/62_memoria.png" alt=""><div><h4>Minijuegos de convivencia</h4><p>Memoria, Burbujas, Ordena la palabra, Verdadero o falso…</p></div></div>
+        <div class="card mini reveal"><img src="img/80_jugar.png" alt=""><div><h4>Arcade</h4><p>Vuelo, Serpiente, 2048, Torre y Pong a dos.</p></div></div>
+      </div>
+    </section>
+
+    <!-- Convi -->
+    <section id="convi" class="section convi-section">
+      <div class="convi-stage reveal">
+        <div class="bubble" id="convi-bubble" role="status">¡Hola! Soy Convi. Tócame 👋</div>
+        <button class="convi-btn" id="convi" aria-label="Tocar a Convi">
+          <svg class="convi" viewBox="0 0 200 240" id="convi-svg"><use href="#convi-art"/></svg>
+        </button>
+      </div>
+      <div class="convi-text reveal">
+        <span class="kicker">La mascota</span>
+        <h2>Conoce a Convi</h2>
+        <p>Un robot flotante con sombrero de paja que te acompaña por toda la app: te saluda, celebra cuando subes de nivel, se preocupa cuando algo anda mal y se disfraza en cada temporada (Halloween, Navidad, vacaciones…).</p>
+        <p>Está dibujado y animado completamente con código: flota con su propulsor, parpadea, mira a los lados, su corazón late y cambia de expresión según su ánimo.</p>
+        <div class="moods">
+          <button data-mood="happy">😊 Feliz</button>
+          <button data-mood="love">💗 Cariño</button>
+          <button data-mood="wave">👋 Saludar</button>
+          <button data-mood="sleep">😴 Dormir</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguridad -->
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Seguridad y privacidad</span>
+        <h2>Diseñada para proteger</h2>
+      </div>
+      <div class="safety">
+        <div class="card reveal"><h3>🔒 El anonimato es real</h3><p>Los reportes anónimos se guardan con una clave privada, no con tu cuenta. El colegio puede atenderlos sin saber quién los envió.</p></div>
+        <div class="card reveal"><h3>🏫 Cada colegio ve lo suyo</h3><p>El personal solo ve los casos de su institución, y las reglas del servidor lo garantizan aunque alguien intente otra cosa.</p></div>
+        <div class="card reveal"><h3>🛡️ Roles protegidos</h3><p>Ser personal del colegio, soporte o fundador requiere códigos y permisos que se verifican en el servidor.</p></div>
+        <div class="card reveal"><h3>🚫 Tú decides con quién hablar</h3><p>Puedes bloquear personas y reportar conversaciones. Las salas de juego en línea se cierran solas.</p></div>
+      </div>
+    </section>
+
+    <!-- Cómo se hizo -->
+    <section id="como" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Cómo se hizo</span>
+        <h2>De una idea a una app completa</h2>
+        <p>ConvivApp creció por etapas, versión tras versión, escuchando lo que hacía falta.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><span class="t-v">Idea</span><div><h4>Una forma segura de pedir ayuda</h4><p>Todo empezó con una pregunta: ¿cómo lograr que ningún estudiante enfrente solo una situación de acoso o conflicto?</p></div></li>
+        <li class="reveal"><span class="t-v">0.3</span><div><h4>Rediseño completo</h4><p>Nueva identidad visual, reportes con fotos, chat por caso, retos para aprender y botón de ayuda.</p></div></li>
+        <li class="reveal"><span class="t-v">0.5</span><div><h4>En la nube</h4><p>Cuentas, reportes anónimos y panel del colegio conectados con Firebase, con reglas de seguridad en el servidor.</p></div></li>
+        <li class="reveal"><span class="t-v">0.7</span><div><h4>Soporte y administración</h4><p>Chat de soporte, instituciones, administración de cuentas y actualizaciones dentro de la app.</p></div></li>
+        <li class="reveal"><span class="t-v">0.9</span><div><h4>Juegos y logros</h4><p>Minijuegos, rachas, etiquetas, títulos por logros y el primer estilo Liquid Glass.</p></div></li>
+        <li class="reveal"><span class="t-v">0.12</span><div><h4>Mensajes y multijugador</h4><p>Mensajes directos, perfiles públicos, Conecta 4 y Triqui en línea, música original.</p></div></li>
+        <li class="reveal"><span class="t-v">0.15</span><div><h4>Catastrophic Racing</h4><p>Un juego de carreras completo, en línea hasta con 8 jugadores, con física propia y autos dibujados a mano.</p></div></li>
+        <li class="reveal"><span class="t-v">0.16</span><div><h4>Nace Convi</h4><p>La mascota robot con sombrero de paja, inicio renovado, celebraciones al subir de nivel y decoración por temporada.</p></div></li>
+        <li class="reveal"><span class="t-v">0.17</span><div><h4>Una app que suena</h4><p>45 sonidos originales, motor de carreras con sonido real, Gran Premio y Contrarreloj.</p></div></li>
+        <li class="reveal"><span class="t-v">0.18</span><div><h4>Eventos catastróficos</h4><p>Pistas enormes y suaves, paisaje sólido, agua y lava, una pista volcánica y 13 eventos sorpresa.</p></div></li>
+        <li class="reveal"><span class="t-v">0.19</span><div><h4>Dibuja y Adivina</h4><p>El juego de dibujo en línea para hasta 10 personas, y un Liquid Glass mucho más refinado.</p></div></li>
+      </ol>
+
+      <div class="tech">
+        <div class="card reveal"><b>Flutter</b><span>Un solo código para Android, Windows y la web.</span></div>
+        <div class="card reveal"><b>Firebase</b><span>Cuentas, base de datos en tiempo real y reglas de seguridad.</span></div>
+        <div class="card reveal"><b>Builds firmadas</b><span>Cada versión se compila y firma automáticamente.</span></div>
+        <div class="card reveal"><b>Sonido original</b><span>Música y efectos sintetizados con código, sin licencias de terceros.</span></div>
+        <div class="card reveal"><b>+70 pruebas</b><span>Pruebas automáticas que revisan cada versión antes de publicarla.</span></div>
+        <div class="card reveal"><b>Todo dibujado</b><span>Convi, los autos y las pistas se dibujan en código vectorial.</span></div>
+      </div>
+    </section>
+
+    <!-- Fundador -->
+    <section class="section">
+      <div class="founder reveal">
+        <div class="founder-avatar"><span>J</span></div>
+        <div>
+          <span class="founder-badge">🏅 Fundador</span>
+          <h3>Julian Enrique Jimeno Orozco</h3>
+          <p class="founder-role">Fundador y creador de ConvivApp</p>
+          <blockquote>“Creé ConvivApp para que cada estudiante tenga una forma segura de pedir ayuda y para que los colegios atiendan a tiempo cada situación de convivencia.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descargar -->
+    <section id="descargar" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Descargar</span>
+        <h2>Empieza hoy, es gratis</h2>
+        <p id="download-version">La versión más reciente, siempre en estos enlaces.</p>
+      </div>
+      <div class="downloads">
+        <article class="card dl reveal">
+          <div class="dl-ico" style="--c:#21A666"><svg viewBox="0 0 24 24"><path d="M7 9h10v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM5 9.5v6M19 9.5v6M9 19v2.5M15 19v2.5M7.5 8.5a4.5 4.5 0 0 1 9 0z"/></svg></div>
+          <h3>Android</h3>
+          <p class="dl-size" data-asset="ConvivApp.apk">Archivo APK</p>
+          <a class="btn btn-primary" href="https://github.com/convivsolutions/convivapp-descargas/releases/latest/download/ConvivApp.apk">Descargar APK</a>
+          <details><summary>¿Cómo instalarla?</summary><p>Abre el archivo descargado. Si Android lo pide, permite <i>instalar apps desconocidas</i> para tu navegador o administrador de archivos. Las actualizaciones luego se instalan desde la misma app.</p></details>
+        </article>
+        <article class="card dl reveal">
+          <div class="dl-ico" style="--c:#3F72D6"><svg viewBox="0 0 24 24"><path d="M3 5.5l7.5-1v7H3zM12 4.2L21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.2z"/></svg></div>
+          <h3>Windows</h3>
+          <p class="dl-size" data-asset="ConvivApp-Setup.exe">Instalador</p>
+          <a class="btn btn-primary" href="https://github.com/convivsolutions/convivapp-descargas/releases/latest/download/ConvivApp-Setup.exe">Descargar instalador</a>
+          <details><summary>¿Cómo instalarla?</summary><p>Ejecuta <i>ConvivApp-Setup.exe</i>. Si aparece la pantalla azul de Windows, toca <i>Más información</i> y luego <i>Ejecutar de todas formas</i>.</p></details>
+        </article>
+        <article class="card dl reveal">
+          <div class="dl-ico" style="--c:#6C4BC6"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+          <h3>Web (y iPhone)</h3>
+          <p class="dl-size">Sin instalar nada</p>
+          <a class="btn btn-primary" href="https://convivapp-3a5d6.web.app" target="_blank" rel="noopener">Abrir ConvivApp</a>
+          <details><summary>¿Y en iPhone?</summary><p>Abre el enlace en Safari, toca <i>Compartir</i> y luego <i>Agregar a inicio</i>: queda como una app más.</p></details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Preguntas -->
+    <section id="preguntas" class="section narrow">
+      <div class="section-head reveal">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2>¿Dudas?</h2>
+      </div>
+      <div class="faq reveal">
+        <details><summary>¿Cuánto cuesta?</summary><p>Nada. ConvivApp es gratis para estudiantes y para el personal de los colegios.</p></details>
+        <details><summary>¿El colegio sabe quién hizo un reporte anónimo?</summary><p>No. Los reportes anónimos no llevan tu nombre y se guardan con una clave privada; aun así puedes seguir el caso y hablar con el equipo de convivencia.</p></details>
+        <details><summary>¿Cómo entra el personal del colegio?</summary><p>Al crear la cuenta se elige el rol de personal y se ingresa el código que entrega ConvivApp. Así solo el personal real ve los casos.</p></details>
+        <details><summary>¿Se puede usar sin internet?</summary><p>Los minijuegos, la carrera rápida contra la máquina y el modo fiesta funcionan sin internet. Los reportes, el chat y los juegos en línea necesitan conexión.</p></details>
+        <details><summary>¿Cómo me actualizo?</summary><p>La app avisa sola cuando hay una versión nueva. En Android se descarga e instala desde la misma app; en la web siempre tienes la última.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="img/logo.svg" alt="" width="28" height="28"><span>ConvivApp</span></div>
+    <p>Tecnología para una mejor convivencia escolar.</p>
+    <p class="fine">Creado por Julian Enrique Jimeno Orozco · Hecho con Flutter y Firebase · <a href="https://github.com/convivsolutions/convivapp-descargas/releases" target="_blank" rel="noopener">Todas las versiones</a></p>
+  </footer>
+
+  <!-- Convi: el mismo dibujo de la app, en vector -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#e2e8f0"/><stop offset="1" stop-color="#b8c4d6"/></linearGradient>
+      <linearGradient id="armg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e2e8f0"/><stop offset="1" stop-color="#94a3b8"/></linearGradient>
+      <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#0b1120"/></linearGradient>
+      <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5f3fc"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+      <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
+      <g id="convi-art">
+        <ellipse class="c-shadow" cx="100" cy="233" rx="42" ry="6" fill="#000" opacity=".2" filter="url(#soft)"/>
+        <g class="c-float">
+          <path class="c-flame" d="M86 214 Q100 242 114 214Z" fill="url(#flame)" filter="url(#soft)"/>
+          <rect x="81" y="204" width="38" height="12" rx="6" fill="#475569"/>
+          <g class="c-arm-l" style="transform-origin:56px 166px"><rect x="48" y="162" width="16" height="40" rx="8" fill="url(#armg)"/><circle cx="56" cy="206" r="11" fill="#f8fafc" stroke="rgba(0,0,0,.2)" stroke-width="1.2"/></g>
+          <rect x="52" y="145" width="96" height="66" rx="28" fill="url(#metal)" stroke="rgba(0,0,0,.13)" stroke-width="1.5"/>
+          <rect x="77" y="164" width="46" height="32" rx="12" fill="#0f172a"/>
+          <g class="c-heart" style="transform-origin:100px 181px">
+            <path d="M100 189 C88 181 90 171 96 171 C99 171 100 174 100 175 C100 174 101 171 104 171 C110 171 112 181 100 189Z" fill="var(--heart,#4ade80)" filter="url(#glow)" opacity=".6"/>
+            <path d="M100 188 C89 180.5 91 172 96 172 C99 172 100 175 100 176 C100 175 101 172 104 172 C109 172 111 180.5 100 188Z" fill="var(--heart,#4ade80)"/>
+          </g>
+          <circle cx="62" cy="166" r="2.6" fill="#94a3b8"/><circle cx="138" cy="166" r="2.6" fill="#94a3b8"/>
+          <rect x="87" y="139" width="26" height="12" rx="4" fill="#64748b"/>
+          <g class="c-arm-r" style="transform-origin:144px 166px"><rect x="136" y="162" width="16" height="40" rx="8" fill="url(#armg)"/><circle cx="144" cy="206" r="11" fill="#f8fafc" stroke="rgba(0,0,0,.2)" stroke-width="1.2"/></g>
+          <g class="c-head">
+            <rect x="38" y="56" width="124" height="88" rx="36" fill="url(#metal)" stroke="rgba(0,0,0,.13)" stroke-width="1.5"/>
+            <circle cx="36" cy="102" r="11" fill="#94a3b8"/><circle cx="164" cy="102" r="11" fill="#94a3b8"/>
+            <circle class="c-ear" cx="36" cy="102" r="6" fill="var(--heart,#4ade80)" filter="url(#soft)"/><circle class="c-ear" cx="164" cy="102" r="6" fill="var(--heart,#4ade80)" filter="url(#soft)"/>
+            <rect x="51" y="75" width="98" height="58" rx="26" fill="url(#visor)"/>
+            <ellipse class="c-blush" cx="66" cy="118" rx="9" ry="4.5" fill="#ff6b9a" opacity="0" filter="url(#soft)"/><ellipse class="c-blush" cx="134" cy="118" rx="9" ry="4.5" fill="#ff6b9a" opacity="0" filter="url(#soft)"/>
+            <g class="c-eyes">
+              <g class="c-eye-open">
+                <rect x="72.5" y="89.5" width="15" height="21" rx="7" fill="#67e8f9" filter="url(#glow)" opacity=".6"/>
+                <rect x="72.5" y="89.5" width="15" height="21" rx="7" fill="#67e8f9"/>
+                <rect x="112.5" y="89.5" width="15" height="21" rx="7" fill="#67e8f9" filter="url(#glow)" opacity=".6"/>
+                <rect x="112.5" y="89.5" width="15" height="21" rx="7" fill="#67e8f9"/>
+                <circle cx="77" cy="95" r="2.2" fill="#fff" opacity=".85"/><circle cx="117" cy="95" r="2.2" fill="#fff" opacity=".85"/>
+              </g>
+              <g class="c-eye-happy" fill="none" stroke="#67e8f9" stroke-width="4.5" stroke-linecap="round">
+                <path d="M71 104 Q80 90 89 104"/><path d="M111 104 Q120 90 129 104"/>
+              </g>
+              <g class="c-eye-closed" stroke="#67e8f9" stroke-width="3.5" stroke-linecap="round"><path d="M72 102h16M112 102h16"/></g>
+            </g>
+            <path class="c-mouth" d="M89 120 Q100 129 111 120" fill="none" stroke="#67e8f9" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M56 80 Q70 74 92 76 L84 86 Q68 86 58 94Z" fill="#fff" opacity=".12"/>
+            <g class="c-hat" transform="translate(98 60) rotate(-6)">
+              <path d="M-39.6 0 Q-42.2 -55.4 0 -58.1 Q42.2 -55.4 39.6 0Z" fill="#f6c945"/>
+              <rect x="-40.3" y="-17.2" width="80.6" height="14.5" fill="#d62828"/>
+              <ellipse cx="0" cy="2.6" rx="66" ry="14.5" fill="#d9a92e"/>
+              <ellipse cx="0" cy="0" rx="63.4" ry="11.9" fill="#f6c945"/>
+            </g>
+          </g>
+        </g>
+        <g class="c-zzz" fill="#818cf8" font-family="Fredoka, sans-serif" font-weight="700"><text x="150" y="60" font-size="18">z</text><text x="162" y="44" font-size="13">z</text></g>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
